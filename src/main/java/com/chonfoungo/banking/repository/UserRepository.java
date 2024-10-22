@@ -33,7 +33,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     List<User> searchByFirstNameContaining(String firstName);
 
     @Query("from User u inner join Account a on u.id = a.user.id where a.iban = :iban")
-    List<User> searchByIban(String accountIban);
+    List<User> searchByIban(String iban);
 
     @Query(value = "select * from _user u inner join account a on u.id = a.id_user where a.iban = :iban", nativeQuery = true)
     List<User> searchByIbanNative(String iban);
