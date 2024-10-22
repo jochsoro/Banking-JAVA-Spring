@@ -12,7 +12,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Contact extends  AbstractEntity {
+public class Contact extends AbstractEntity {
 
     private String firstName;
     private String lastName;
